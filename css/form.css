@@ -1,0 +1,54 @@
+/* Written by: Andreas Michailidis, November 2020 */
+
+input[type=email]
+{
+	border: 2px solid grey;
+}
+
+textarea{ 
+border: 2px solid grey;
+}
+
+input[type=submit] {
+color: black;
+border-radius: 20px;
+border: 2px solid black;
+background-color: khaki;
+}
+
+
+
+/* aligns the form in a neater way on the side of the screen */
+
+form { 
+	text-align:left;
+	list-style-type: none; /* Removes bullet points from the list */
+	display:flex;
+	flex-direction: column;
+	float:left;
+	border-bottom: 2px groove grey;
+	border-top: 2px groove grey;
+}
+label {
+	font-weight: bold;
+}
+
+#submit:hover {
+	border: 2px solid lightcoral;
+}
+	
+/* media query for the smallest, reasonably common screen sizes (360x640) where the footer would otherwise
+hide too much content from the bottom, screen size souced from:
+https://www.hobo-web.co.uk/best-screen-size/ (2020), Shaun Andreson */
+
+@media screen and (max-width: 400px) { 
+body { 
+margin-bottom: 50vh;
+}
+footer p {
+	font-size: 0.7rem;
+}
+}
+
+
+

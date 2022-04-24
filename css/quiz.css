@@ -1,0 +1,83 @@
+ p#quiztext {
+     text-align:center;
+     color:blue;
+}
+ .container {
+     position:relative;
+     width: 30%;
+     padding: 20px;
+}
+/* The following code causes the answers to the quiz to gradually fade into view when the mouse is hovering infront of them,
+as demonstrated by w3schools at https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+
+/* Set the border and transition of the images */
+ .quizimage {
+     width: 90vw;    /* vw is used here to ensure images have a relatively large enough size, proportional to screen size, so they are readable */
+     border: 0.6vw outset rgb(100, 130, 255) ;    /* Create a border relative to screen width so it's never too overbearing nor too small*/
+     transition: 0.8s ease;   /* How long for the image to fade out to reduced opacity */
+}
+
+/* Effects for when the mouse hovers over the image */
+
+ .textappear {
+     top: 50%;
+     left: 50%;
+     transition: 1s ease;
+     position: absolute;
+     opacity: 0;
+     transform: translate(-50%, -50%);   /* Center the answer on the image */
+     text-align: center;
+}
+ .quizimages {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 100vh;
+}
+
+/* Reduces opacity of image and makes text visible by increasing its opacity on hover*/
+
+ .container:hover .textappear {
+     opacity: 1;
+}
+ .container:hover .quizimage {
+     opacity: 0.3;
+}
+ .answer {
+     background-color: rgb(0, 153, 255);
+     border-radius: 20px;
+     text-decoration: overline underline;
+     border: 2px solid black;
+     color: black;
+     font-size: 1rem;
+     padding: 1rem 2rem;
+}
+ @media screen and (min-width: 800px) {
+     .quizimage {
+         width: 70vh;
+    }
+     .container {
+         width: 70vh;
+    }
+}
+ @media screen and (max-width: 800px) {
+     .quizimage {
+         width: 80vh;
+         border: 1.8vw outset rgb(100, 130, 255);       /* Scale border slightly so it's not too small on smaller screen devices */
+    }
+     .container {
+         width: 80vh;
+    }
+}
+
+/* media query for the smallest, reasonably common screen sizes (360x640) where some content becomes hard to read https://www.hobo-web.co.uk/best-screen-size/ (2020), Shaun Andreson */
+ 
+ @media screen and (max-width: 400px) {
+     .quizimage {
+         width: 50vh;
+         border: 1.8vw outset rgb(100, 130, 255);        /* Scale border slightly so it's not too small on smaller screen devices */
+    }
+     .container {
+         width: 50vh;
+    }
+}

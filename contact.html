@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <title>Andreas Michailidis</title>
+      <meta name="author" content="Andreas Michailidis" />
+      <link rel="stylesheet" href="./css/site.css">
+      <link rel="stylesheet" href="./css/form.css">
+   </head>
+   <body>
+      <header>
+         <h1><a href="index.html" class="name">ANDREAS MICHAILIDIS</a></h1>
+      </header>
+      <nav>
+         <ul class="navbar">
+            <li><a href="index.html" class="nav">Home</a></li>
+            <li><a href="degree.html" class="nav">Degree</a></li>
+            <li><a href="quiz.html" class="nav">Quiz</a></li>
+            <li><a href="js.html" class="nav">Data</a></li>
+         </ul>
+      </nav>
+      <main>
+         <h2>Contact</h2>
+         <table>
+            <tr>
+               <td></td>
+               <td>amichailidis4@sheffield.ac.uk</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>Andreas Michailidis</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>Department of Computer Science</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>University of Sheffield</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>211 Portobello</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>Sheffield City Centre</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>S1 4DP</td>
+            </tr>
+         </table>
+         <br>
+         <p> Use the form below to send me any comments via my e-mail. Your e-mail will only be used for purposes of contacting me, and is not saved or stored anywhere.</p>
+         <form name="email" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.php" method="POST">
+            <input type="hidden" name="recipients" value="amichailidis4@sheffield.ac.uk">
+			
+            <!-- Putting the form in a list tag helps to visually set out the elements neatly -->
+			
+            <ul class="form">
+               <li>
+                  <p>
+                     <label for="your email">Your e-mail:</label>
+                     <input type="email" name="User's e-mail" id="email" placeholder="Type your email here">
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <label for="your comments">Your comments:</label>
+                     <textarea name="User's Comments" id="comments" placeholder="Type your comments here" rows="5" cols="30"></textarea>
+                  </p>
+                  <p>
+                     <input type="submit" value="Submit Comment" id = "submit">
+                  </p>
+               </li>
+            </ul>
+         </form>
+      </main>
+      <footer>
+         <div class="bottomnav">
+            <a href="contact.html">Contact</a>
+            <a href="accessibility.html">Accessibility</a>
+         </div>
+         <hr>
+         <div class="disclaimer">
+            <p>Copyright &copy; Andreas Michailidis, 2020
+            <p>This website is created and written only by me as a student of Computer Science. It is not an official University of Sheffield site, and all views are solely my own.</p>
+         </div>
+      </footer>
+   </body>
+</html>
